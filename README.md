@@ -1,98 +1,103 @@
-# ms-rwe-adherence-analysis
-Real-world evidence analysis of adherence and persistence in multiple sclerosis therapies.
-📌 Project Title
+# Real-World Evidence Analysis of Adherence and Persistence in Multiple Sclerosis Therapy
 
-Real-World Evidence Analysis of Adherence and Persistence in Multiple Sclerosis Therapy
+## Project Overview
 
-📖 Project Overview
+This project presents a retrospective population-based pharmacoepidemiological study assessing adherence and persistence to immunomodulatory therapies (disease-modifying therapies, DMTs) for Multiple Sclerosis (MS).
 
-This project presents a retrospective population-based pharmacoepidemiological analysis assessing adherence and persistence to immunomodulatory therapies for Multiple Sclerosis (MS) using national prescription claims data (2011–2015).
+The analysis is based on national outpatient prescription claims data (2011–2015) and applies advanced statistical modeling and survival analysis methods to evaluate real-world treatment patterns.
 
-The study evaluates real-world treatment patterns across injectable and oral disease-modifying therapies (DMTs), applying advanced statistical modeling and survival analysis techniques.
+Full thesis publication (official university repository):
+https://dk.um.si/IzpisGradiva.php?id=79334&lang=eng
 
 ⚠ Raw prescription data are not publicly available due to data protection and ethical restrictions.
 
-Official thesis publication:
-https://dk.um.si/IzpisGradiva.php?id=79334&lang=eng
+---
 
-🎯 Objectives
+## Research Objectives
 
-Assess medication adherence using CMA5 methodology
+- Assess medication adherence using CMA5 methodology  
+- Estimate treatment persistence using survival analysis  
+- Compare oral and injectable therapies  
+- Evaluate fingolimod relative to other DMTs  
+- Identify predictors of non-adherence and treatment discontinuation  
 
-Estimate treatment persistence using Kaplan–Meier survival analysis
+---
 
-Compare oral vs injectable therapies
+## Study Design
 
-Identify predictors of non-adherence and treatment discontinuation
+**Type:** Retrospective population-based cohort study  
+**Data Source:** National prescription claims database (2011–2015)  
+**Population:** Patients receiving ≥2 prescriptions for immunomodulatory therapy  
 
-Model risk factors using multivariate logistic regression and Cox proportional hazards regression
+### Cohort Construction
 
-🧪 Methodological Framework
+- Identification of DMTs using ATC classification  
+- Exclusion of hospital-only therapies  
+- Separation into:
+  - Therapy-naïve cohort  
+  - Therapy-experienced cohort  
+- Definition of therapeutic episodes using a 180-day permissible gap  
+- Semi-naïve cohort constructed for time-to-event modeling  
 
-Study Design:
-Retrospective population-based cohort study
+---
 
-Data Source:
-National prescription claims database (2011–2015)
+## Adherence Modeling
 
-Cohort Construction:
+Adherence was estimated using the **CMA5 methodology** (equivalent to PDC-based interval modeling).
 
-Patients with ≥2 prescriptions
+Key characteristics:
+- Adherence calculated within persistent treatment episodes  
+- 180-day permissible gap definition  
+- Threshold-based classification (≥90%)  
+- Implemented in R using the *AdhereR* package  
 
-Naïve and experienced therapy cohorts
+---
 
-Therapeutic episode definition with 180-day permissible gap
+## Persistence Analysis
 
-Adherence Modeling:
+Persistence was analyzed using time-to-event methods:
 
-CMA5 methodology
+- Kaplan–Meier survival curves  
+- Log-rank (Mantel–Cox) testing  
+- Cox proportional hazards regression  
 
-Implemented using R (AdhereR package)
+Events modeled:
+- Treatment discontinuation  
+- Treatment switching  
 
-Threshold-based classification (≥90%)
+---
 
-Persistence Modeling:
+## Statistical Methods
 
-Kaplan–Meier survival curves
+- Descriptive statistics (mean, median, CI)
+- Kruskal–Wallis and Wilcoxon tests
+- Multivariate logistic regression
+- Cox proportional hazards modeling
 
-Log-rank (Mantel–Cox) testing
+**Software used:**
+- R / RStudio  
+- IBM SPSS  
 
-Time-to-event analysis (discontinuation / switching)
+---
 
-Regression Analysis:
+## Key Analytical Insights
 
-Multivariate logistic regression
+- Oral therapies (teriflunomide, dimethyl fumarate) demonstrated higher adherence compared to injectable therapies.
+- Fingolimod showed superior persistence rates.
+- Prior therapy exposure and treatment switching significantly influenced adherence behavior.
+- Real-world prescription data can effectively model drug utilization using survival and regression frameworks.
 
-Cox proportional hazards modeling
+---
 
-Software:
+## Skills Demonstrated
 
-R / RStudio
+- Real-World Data (RWD) analysis  
+- Pharmacoepidemiology  
+- Cohort design and exposure modeling  
+- Survival analysis  
+- Multivariate risk modeling  
+- Statistical programming in R  
+- Evidence-based interpretation  
 
-IBM SPSS
 
-📊 Key Findings
 
-Oral therapies (teriflunomide, dimethyl fumarate) demonstrated higher adherence compared to injectable therapies.
-
-Fingolimod showed superior persistence rates.
-
-Treatment switching and therapy history significantly influenced adherence behavior.
-
-💡 Skills Demonstrated
-
-Real-World Data (RWD) analytics
-
-Pharmacoepidemiology
-
-Survival analysis
-
-Multivariate modeling
-
-Cohort design
-
-Medication exposure modeling using DDD
-
-Statistical programming (R, SPSS)
-
-Evidence-based interpretation
